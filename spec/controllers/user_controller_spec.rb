@@ -2,19 +2,12 @@ require 'rails_helper'
 
 describe UsersController do
 
-  describe "GET #index" do
-    it "should render index login page" do
-      get :index
-      expect(response).to render_template :index
+  describe "GET #show" do
+    it "should render user's page" do
+      user = FactoryGirl.create(:user)
+      get :show, id: user
+      expect(response).to render_template :show
     end
   end
-
-  # describe "GET #index" do
-  #   it "should render login form at index" do
-  #     get :index
-
-  #   end
-  # end
-
 
 end
