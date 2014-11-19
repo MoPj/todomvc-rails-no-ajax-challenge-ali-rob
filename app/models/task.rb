@@ -3,5 +3,5 @@ class Task < ActiveRecord::Base
 
   # for recursive tasks called steps
   belongs_to :parent, class_name: "Task"
-  has_many :steps, class_name: "Task", foreign_key: parent_id
+  has_many :steps, class_name: "Task", foreign_key: :parent_id
 end
