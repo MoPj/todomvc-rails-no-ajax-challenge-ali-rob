@@ -26,9 +26,9 @@ ActiveRecord::Schema.define(version: 20141119155510) do
   create_table "tasks", force: true do |t|
     t.string   "name"
     t.boolean  "completed",  default: false
-    t.integer  "user_id"
     t.integer  "parent_id"
     t.integer  "list_id"
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
